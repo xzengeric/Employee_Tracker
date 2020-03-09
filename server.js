@@ -138,7 +138,8 @@ function displayManager() {
 
 //Add New Employee
 function addEmployee() {
- 
+    console.log("ID references: 1- CEO, 2- manager, 3- sales, 4 -CFO");
+    console.log ("if he/she do have Manager, his ID is 2!");
     inquirer
         .prompt([
             {
@@ -168,9 +169,9 @@ function addEmployee() {
             var title = parseInt(answer.title);
             var manager = parseInt(answer.manager);
      
-
+            
             if (title !== null) {
-                console.log(first_Name,last_Name,title,manager);
+
 
                 var query = "INSERT INTO employee (first_Name, last_Name, role_id, manager_id) VALUES (?, ?, ?, ?)";
               
